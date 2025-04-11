@@ -242,12 +242,6 @@
       />
     </joint>
 
-    <!-- <joint name="${tf_prefix}camera_holder_joint" type="fixed">
-      <origin xyz="0.01104 0.025 -0.0984" rpy="0.0 -1.57 -1.57"/>
-      <parent link="${tf_prefix}link_5"/>
-      <child link="${tf_prefix}camera_holder_link"/>
-    </joint> -->
-
     <joint name="${tf_prefix}camera_holder_joint" type="fixed">
       <origin xyz="-0.025 -0.01104 -0.13135" rpy="-3.14 1.57 0.0"/>
       <parent link="${tf_prefix}link_4"/>
