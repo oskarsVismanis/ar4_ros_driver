@@ -242,6 +242,39 @@
       />
     </joint>
 
+    <!-- <joint name="${tf_prefix}camera_holder_joint" type="fixed">
+      <origin xyz="0.01104 0.025 -0.0984" rpy="0.0 -1.57 -1.57"/>
+      <parent link="${tf_prefix}link_5"/>
+      <child link="${tf_prefix}camera_holder_link"/>
+    </joint> -->
+
+    <joint name="${tf_prefix}camera_holder_joint" type="fixed">
+      <origin xyz="-0.025 -0.01104 -0.13135" rpy="-3.14 1.57 0.0"/>
+      <parent link="${tf_prefix}link_4"/>
+      <child link="${tf_prefix}camera_holder_link"/>
+    </joint>
+
+    <link name="${tf_prefix}camera_holder_link">
+      <visual>
+        <geometry>
+          <mesh filename="file://$(find annin_ar4_description)/meshes/ar4/J6_Peripheral_HolderXRealsenseD415.STL" />
+        </geometry>
+        <material name="">
+          <color rgba="1 1 0 1"/>
+        </material>
+      </visual>
+      <collision>
+        <geometry>
+          <mesh filename="file://$(find annin_ar4_description)/meshes/ar4/J6_Peripheral_HolderXRealsenseD415.STL" />
+        </geometry>
+      </collision>
+      <inertial>
+        <origin xyz="0.0 0.0 0.0"/>
+        <mass value="0.08"/>
+        <inertia ixx="0.00000002" ixy="0.00000002" ixz="0.00000002" iyy="0.00000002" iyz="0.00000002" izz="0.00000002"/>
+      </inertial>
+    </link>
+
     <!-- center of the end effector mounting surface on link_6 -->
     <link name="${tf_prefix}ee_link" />
     <joint name="${tf_prefix}ee_joint" type="fixed">

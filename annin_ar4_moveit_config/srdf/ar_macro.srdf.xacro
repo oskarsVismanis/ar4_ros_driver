@@ -40,5 +40,12 @@
     <disable_collisions link1="${tf_prefix}link_4" link2="${tf_prefix}link_5" reason="Adjacent" />
     <disable_collisions link1="${tf_prefix}link_5" link2="${tf_prefix}link_6" reason="Adjacent" />
 
+    <disable_collisions link1="${tf_prefix}camera_holder_link" link2="${tf_prefix}base_link" reason="Never" />
+    <disable_collisions link1="${tf_prefix}camera_holder_link" link2="${tf_prefix}link_1" reason="Never" />
+    <disable_collisions link1="${tf_prefix}camera_holder_link" link2="${tf_prefix}link_2" reason="Never" />
+    <disable_collisions link1="${tf_prefix}camera_holder_link" link2="${tf_prefix}link_4" reason="Adjacent" />
+    <disable_collisions link1="${tf_prefix}camera_holder_link" link2="${tf_prefix}link_5" reason="Never" />
+    <disable_collisions link1="${tf_prefix}camera_holder_link" link2="${tf_prefix}link_6" reason="Never" />
+
   </xacro:macro>
 </robot>
